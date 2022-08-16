@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="chapters.css" type="text/css">
+    
+    <title>SimeonDAC - R Programming Course</title>
+</head>
+<body>
+   <header>
+    <nav>
+        <a href="/r-prog/"><i class="fa fa-arrow-left"></i></a>
+        <h3>R Programming - Chapter 1</h3>
+        <div class="navlinks" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/wida/">What is Data Analysis?</a></li>
+                <li><a href="/dac/">Data Analysis</a></li>
+                <li><a href="/r-prog/">R Programming</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        <div class="head">
+        <div class="left">W
+        </div>
+        <div class="right">
+            What is the R programming language?
+        </div>
+        </div>
+   </header>
+   <main>
+        <p>R is a language and environment for statistical computing and graphics, similar to the S language originally developed at Bell Labs. It’s an open source solution to data analysis that’s supported by a large and active worldwide research community.</p>
+        <hr>
+        <p> The many useful features of R include:
+            <ul>
+                <li>Most commercial statistical software platforms cost thousands, if not tens of
+            thousands, of dollars. R is free! If you’re a teacher or a student, the benefits are
+            obvious. </li>
+                <li>R is a comprehensive statistical platform, offering all manner of data-analytic techniques. Just about any type of data analysis can be done in R.</li>
+                <li>R has state-of-the-art graphics capabilities. If you want to visualize complex data, R has the most comprehensive and powerful feature set available.</li>
+                <li>R contains advanced statistical routines not yet available in other packages. In fact, new methods become available for download on a weekly basis. </li>
+                <li>R is a powerful platform for interactive data analysis and exploration. The results of any analytic step can easily be saved, manipulated, and used as input for additional analyses. </li>
+                <li>R can easily import data from a wide variety of sources, including text files, database-management systems, statistical packages, and specialized data stores. It can write data out to these systems as well. </li>
+                <li>R can also access data directly from web pages, social media sites, and a wide range of online data services.</li>
+            </ul>
+        </p>
+        <hr>
+        <p>
+            <h3>Installation of R</h3>
+            R is freely available from the <a href="http://cran.r-project.org">Comprehensive R Archive Network (CRAN)</a>. It is currently available for Linux, Mac OS X, and Windows. Directions on how to install for each specific platform are given on the website.
+        </p>
+        <hr>
+        <p>
+            <h3>R Packages</h3>
+            R comes with extensive capabilities right out of the box. But some of its most exciting features are available as optional modules that you can download and install. There are more than 5,500 user-contributed modules called packages that you can download from <a href="http://cran.r-project.org/web/packages">CRAN</a>. They provide a tremendous range of new capabilities, from the analysis of geospatial data to protein mass spectra process.<br><br>
+            Packages are collections of R functions, data, and compiled code in a well-defined format. The directory where packages are stored on your computer is called the library. Once installed, they must be loaded into the session in order to be
+            used. <br><br>
+            <b>To install a package:<br></b>
+            You can directly provide its name as an argument to the function. For example, the ggplot2 package contains functions for creating enhanced visualizations. You can download and install the package with the command 
+            <blockquote>install.packages("ggplot2")</blockquote>
+            Authors of packages update these packages regularly. To update any package that has been previously installed, use the command:
+            <blockquote>update.packages("package name")</blockquote>
+            <b>To load a package: <br></b>
+            To use a package in an R session, you need to load the package using the library() command. For example, to use the package ggplot2, use the command:
+            <blockquote>library("ggplot2")</blockquote>
+        </p>
+        <p>
+            <h3>Common Errors made by new R programmers</h3>
+            <ul>
+                <li>Using the wrong case: <br> 
+                    <blockquote>help()</blockquote>
+                    <blockquote>Help()</blockquote>
+                    <blockquote>HELP()</blockquote>
+                    are three different functions (only the first case is correct and will work).</li>
+                <li>Forgetting to use quotation marks when they’re needed: <blockquote>install.packages("ggplot2")</blockquote>
+                    works<blockquote>install.packages(ggplot2)</blockquote> doesn’t.</li>
+                <li>Forgetting to include the parentheses in a function call:<blockquote>help()</blockquote>
+                    works<blockquote>help</blockquote> doesn’t.</li>
+                <li>Using a function from a package that’s not loaded.</li>
+            </ul>
+        </p>
+
+   </main>
+   <div class="directions">
+        <div class="previous">
+            <a href=""><i class="fa fa-arrow-left"></i>  Previous Chapter</a>
+        </div>
+        <div class="next">
+            <a href="ch02.html">Next Chapter  <i class="fa fa-arrow-right"></i></a>
+        </div>
+   </div>
+    <footer>
+        Copyright: <i class="fa fa-copyright"></i> <B>Simeon Imonitie</B>
+     </footer>
+     <script type="text/javascript" src="/script.js"></script>
+</body>
+</html>

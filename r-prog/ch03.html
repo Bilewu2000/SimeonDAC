@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="chapters.css" type="text/css">
+    
+    <title>SimeonDAC - R Programming Course</title>
+</head>
+<body>
+   <header>
+    <nav>
+        <a href="/r-prog/"><i class="fa fa-arrow-left"></i></a>
+        <h3>R Programming - Chapter 3</h3>
+        <div class="navlinks" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/wida/">What is Data Analysis?</a></li>
+                <li><a href="/dac/">Data Analysis</a></li>
+                <li><a href="/r-prog/">R Programming</a></li>
+                <li><a href="/About.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        <div class="head">
+        <div class="left">W
+        </div>
+        <div class="right">
+            Data<br><br>Input
+        </div>
+        </div>
+   </header>
+   <main>
+        <p>Having created a data structure, the next step is to input the data into the structure. This can be done in different ways including: 
+            <li>Direct Entry</li>
+            <li>Importing from files</li>
+            <li>Importing from DBMS</li>
+        </p>
+        <hr>
+        <p> 
+            <h3>Direct data entry</h3>
+            This can be done using the edit() function. This function opens up the data structure allowing the user to edit the values in it using the mouse and keyboard. <br><br>
+            An example:
+            <li>Create an empty data frame using the following command
+                <blockquote>
+                    example &#60- data.frame(age=numeric(0), gender=character(0), weight=numeric(0)) 
+                </blockquote>
+                Note: in the "age=numeric(0)" argument, the age is the name of the column, numeric is the data type and 0 means the data frame is empty.
+            </li>
+            <li>
+                Call the text editor and enter the data while saving the results to the data structure(object).
+                <blockquote>
+                    example <- edit(example)<br>    
+                </blockquote>
+                This command triggers the text editor whch looks like the image below and allows the user to directly enter values like 12, male and 50 directly into the data object.<br>
+                    <img class="codeimg" src="/images/ch03a.png">
+            </li>
+            <li>
+                The fix() function can also be used in place of the edit() function. The syntax is:
+                <blockquote>fix(exammple)</blockquote> It does not need to be reassigned to the data object, it does that automatically.
+            </li>
+        </p>
+        <hr>
+        <p>
+            <h3>Importing from files</h3>
+            R has the ability to read certain files, collect data from them and insert them into a data structure. This is done using the read() function. The different files from which R can import data include:
+            <ul>
+                <li>
+                    <b>Delimited text files: </b><br>
+                    These are files in the CSV format. They are read using the read.table() function which takes a number of arguments to be more specific with how the data is read. The general format is
+                    <blockquote>mydataframe &#60- read.table(file, options)</blockquote>
+                    The options used include:
+                    <dl>
+                        <dt>header:</dt>
+                        <dd>A logical value indicating whether the file contains the variable names in the first line</dd>
+                        
+                        <dt>sep</dt>
+                        <dd>The delimiter separating data values. The default is sep="", which denotes one or more spaces, tabs, new lines, or carriage returns. Use sep="," to read comma-delimited files, and sep="\t" to read tab-delimited files.</dd>
+                    
+                        <dt>row.names</dt>
+                        <dd>An optional parameter specifying one or more variables to represent row identifiers</dd>
+                    
+                        <dt>col.names</dt>
+                        <dd>If the first row of the data file doesn’t contain variable names (header=FALSE), you can use col.names to specify a character vector containing the variable names. If header=FALSE and the col.names option is omitted, variables will be named V1, V2, and so on.</dd>
+                    </dl>
+                    An example of reading a CSV file in R is:
+                    <blockquote>examples &#60- read.table("examples.csv", header=TRUE, row.names="entries", sep=",") </blockquote> 
+                </li>
+                
+                <li>
+                    <b>Excel Files (.xlsx):</b><br>
+                    It is advisable to export an Excel file to a comma-delimited file and import it into R using the previously mentioned technique. <br><br>
+                    The .xlsx file can be read directly into R by initiating the xlsx library and then using the read.xlsx() function in the format
+                    <blockquote>mydataframe &#60- read.xlsx(file, n)</blockquote>
+                    where file is the path to the file and n is the number/postion of the worksheet. An example is:
+                    <blockquote>library(xlsx) <br>
+                        workbook &#60- "c:/myworkbook.xlsx" <br>
+                        mydataframe &#60- read.xlsx(workbook, 1)</blockquote>
+                </li>
+            </ul>
+        </p>
+        <hr>
+        <p>
+            <h3>Importing from Database Manangement Systems</h3>
+            The relational database management systems (DBMSs) Microsoft SQL Server, Microsoft Access, MySQL, Oracle, PostgreSQL, DB2, Sybase, Teradata, and SQLite can all be interfaced with using R. Some programs give access via ODBC or JDBC, while others offer access via native database drivers. Large datasets can be effectively analyzed by using R to access data kept in external DMBSs, which makes use of the strengths of both SQL and R. 
+        </p>
+        <hr>
+   </main>
+   <div class="directions">
+        <div class="previous">
+            <a href="ch02.html"><i class="fa fa-arrow-left"></i>  Previous Chapter</a>
+        </div>
+        <div class="next">
+            <a href="ch04.html">Next Chapter  <i class="fa fa-arrow-right"></i></a>
+        </div>
+   </div>
+    <footer>
+        Copyright: <i class="fa fa-copyright"></i> <B>Simeon Imonitie</B>
+     </footer>
+     <script type="text/javascript" src="/script.js"></script>
+</body>
+</html>

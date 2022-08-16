@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="chapters.css" type="text/css">
+    
+    <title>SimeonDAC - R Programming Course</title>
+</head>
+<body>
+   <header>
+    <nav>
+        <a href="/r-prog/"><i class="fa fa-arrow-left"></i></a>
+        <h3>R Programming - Chapter 6</h3>
+        <div class="navlinks" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/wida/">What is Data Analysis?</a></li>
+                <li><a href="/dac/">Data Analysis</a></li>
+                <li><a href="/r-prog/">R Programming</a></li>
+                <li><a href="/About.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        <div class="head">
+        <div class="left">
+        </div>
+        <div class="right">
+             Examining<br>The Data<br>Object 
+        </div>
+        </div>
+   </header>
+   <main>
+        <p>
+            It’s important to be sure of the data structure before starting the data analysis process. The following commands are suited for 1-dimensional and 2-dimensional tables. The commands shown below assume that your data is stored in the <b><i>example</i></b> variable. 
+        </p>
+        <hr>
+        <p>
+            <h3>The head() function</h3>
+            The head() function when called, shows  the headers of the columns in a data frame and the first 6 rows. It is written in this format:
+            <blockquote>head(example)</blockquote>
+            In order to see more or less rows in the result, the intended number of rows can be passed as a second argument to the head() function. For example, to see 8 rows:
+            <blockquote>head(example, 8)</blockquote>
+        </p>
+        <hr>
+        <p> 
+            <h3>The tail() function</h3>
+            The tail() function is used to show the last rows of the data frame. The tail() function is written in the same format as head(). An example is:
+            <blockquote>tail(example, 12)</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>The str() function</h3>
+            The str() function is used to show the structure of the data frame. The str() function shows the data type, the number of rows and columns of the data object. It also shows the type of data in each column. Example:
+            <blockquote>str(example)</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>colnames() and rownames()</h3>
+            The colnames() and rownames() function are used to show the column and row names of a data frame respectively. Example:
+            <blockquote>colnames(example)<br>rownames(example)</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Summary Statistics</h3>
+            The summary() function is a simple function for gathering summary statisitcs for a data frame. The R terminal runs a basic analysis of the dataset provided. Usage:
+            <blockquote>summary(example)</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Cor() function</h3>
+            The cor() function compares each column of numeric data with other columns of numeric data and shows the correlation between them. Usage:
+            <blockquote>cor(example)</blockquote>
+        </p>
+        <hr>
+   </main>
+   <div class="directions">
+        <div class="previous">
+            <a href="ch04.html"><i class="fa fa-arrow-left"></i>  Previous Chapter</a>
+        </div>
+        <div class="next">
+            <a href="ch06.html">Next Chapter  <i class="fa fa-arrow-right"></i></a>
+        </div>
+   </div>
+    <footer>
+        Copyright: <i class="fa fa-copyright"></i> <B>Simeon Imonitie</B>
+     </footer>
+     <script type="text/javascript" src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="chapters.css" type="text/css">
+    
+    <title>SimeonDAC - R Programming Course</title>
+</head>
+<body>
+   <header>
+    <nav>
+        <a href="/r-prog/"><i class="fa fa-arrow-left"></i></a>
+        <h3>R Programming - Chapter 2</h3>
+        <div class="navlinks" id="navlinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/wida/">What is Data Analysis?</a></li>
+                <li><a href="/dac/">Data Analysis</a></li>
+                <li><a href="/r-prog/">R Programming</a></li>
+                <li><a href="/About.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+        <div class="head">
+        <div class="left">W
+        </div>
+        <div class="right">
+            Data Structures <br> in R
+        </div>
+        </div>
+   </header>
+   <main>
+        <p>
+            To begin data analysis, you must first create a dataset that will contain the information to be studied, in a format that meets your needs.<br>
+            This is done in two steps:
+            <li>Selecting the data structure</li>
+            <li>Entering/Importing data into the structure</li>
+        </p>
+        <hr>
+        <p> 
+            <h3>Selecting the data structure</h3>
+            A dataset is usually a rectangular array of data with rows which represent observations and columns which represent variables. <br><br>
+            There are several objects used in R to hold data. They differ in their structural complexity and type of data they can hold. These include:
+            <li>Vectors</li>
+            <li>Scalars</li>
+            <li>Matrices</li>
+            <li>Arrays</li>
+            <li>Data Frames</li>
+        </p>
+        <hr>
+        <p>
+            <h3>Vectors</h3>
+            A vector is simply a list of items that are of the same type. To combine the list of items to a vector, use the c() function and separate the items by a comma.
+            <blockquote>names <- c("simeon","elsie","barkley")</blockquote>
+            Numeric elements in a vector do not need to be enclosed in quotation marks. An example is shown below
+            <blockquote>addresses &#60- c(5,21,16)</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Scalars</h3>
+            A scalar is a one-column vector. Scalars are generally used to hold constants. They are created using the assignment operator "&#60-". Examples are:
+            <blockquote>age &#60- 25</blockquote>
+            <blockquote>country &#60- "Nigeria"</blockquote>
+            <blockquote>health &#60- TRUE</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Matrices</h3>
+            A matrix is a two-dimensional array in which each element has the same mode (numeric, character, or logical). Matrices are created with the matrix() function. The general format is 
+            <blockquote>myymatrix <- matrix(vector, nrow=number_of_rows, ncol=number_of_columns, byrow=logical_value, dimnames=list(char_vector_rownames, char_vector_colnames))</blockquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Arrays</h3>
+            An array is similar to a matrix but can have more than two dimensions. Arrays are created usign the array() function.
+            <BLOCkquote>
+                myarray <- array(vector, dimensions, dimnames)
+            </BLOCkquote>
+        </p>
+        <hr>
+        <p>
+            <h3>Data Frames</h3>
+            In comparison to a matrix, a data frame is more versatile because distinct columns can store various types of data (numeric, character, and so on). This is the most commonly used data structure in R. A data frame is created with the data.frame() function: <blockquote>mydata <- data.frame(col1, col2, col3,...)</blockquote> The arguments col1, col2, col3, and so on are column vectors of any type (such as character, numeric, or logical). 
+        </p>
+        <hr>
+   </main>
+   <div class="directions">
+        <div class="previous">
+            <a href="ch01.html"><i class="fa fa-arrow-left"></i>  Previous Chapter</a>
+        </div>
+        <div class="next">
+            <a href="ch03.html">Next Chapter  <i class="fa fa-arrow-right"></i></a>
+        </div>
+   </div>
+    <footer>
+        Copyright: <i class="fa fa-copyright"></i> <B>Simeon Imonitie</B>
+     </footer>
+     <script type="text/javascript" src="/script.js"></script>
+</body>
+</html>
